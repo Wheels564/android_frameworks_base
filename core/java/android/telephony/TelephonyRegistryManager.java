@@ -103,8 +103,7 @@ public class TelephonyRegistryManager {
      */
     public void addOnSubscriptionsChangedListener(
             @NonNull SubscriptionManager.OnSubscriptionsChangedListener listener,
-            @NonNull Executor executor) {
-        
+            @NonNull Executor executor) {        
         IOnSubscriptionsChangedListener callback = new IOnSubscriptionsChangedListener.Stub() {
             @Override
             public void onSubscriptionsChanged () {
