@@ -104,10 +104,7 @@ public class TelephonyRegistryManager {
     public void addOnSubscriptionsChangedListener(
             @NonNull SubscriptionManager.OnSubscriptionsChangedListener listener,
             @NonNull Executor executor) {
-        if (mSubscriptionChangedListenerMap.get(listener) != null) {
-            Log.d(TAG, "addOnSubscriptionsChangedListener listener already present");
-            return;
-        }
+        
         IOnSubscriptionsChangedListener callback = new IOnSubscriptionsChangedListener.Stub() {
             @Override
             public void onSubscriptionsChanged () {
